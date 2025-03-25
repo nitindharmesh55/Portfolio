@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    font-family: cursive;
+    background: rgb(0, 0, 0);
+    color: rgb(248, 248, 248);
+    transition: all 1s;
+    scroll-behavior: smooth;
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-top: 25px;
+    
+}
+.nav .logo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-shadow: 2px 5px 6px skyblue;
+}
+.logo span{
+    background: skyblue;
+    border-radius: 25px;
+    padding: 5px;
+}
+.nav ul{
+    display: flex;
+    gap: 25px;
+    
+}
+.nav ul li{
+    list-style: none;
+
+
+}
+.nav ul li a{
+    text-decoration: none;
+    color:white;
+    margin-right: 100px;
+    position: relative;
+}
+.nav ul li a::before{
+    content: "";
+     position: absolute;
+     /* background: skyblue; */
+     width: 100%;
+     padding: 2px;
+     height: 100%;
+     top: -5px;
+     left: -5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: black;
+     z-index: -1;
+     /* border-top: 3px solid skyblue; */
+     border: 3px solid skyblue;
+     /* border-bottom: 3px solid skyblue; */
+     border-radius: 25px;
+     transition: all 1s ease-in-out;
+     transform: scale(0);
+}
+.nav ul li a:hover::before{
+    transform: scale(1.5);
+}
+
+.nav ul li a::after{
+    content: "";
+    position: absolute;
+    background: skyblue;
+    border-radius: 25px;
+    width: 100%;
+    
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: -1;
+    color: black;
+    transition: all 0.5s ease;
+}
+.nav ul li a:hover::after{
+    transform: scale(1.2);
+    
+}
+.nav ul li a:hover{
+    color: black;
+}
+/* Hero section start from here */
+#home{
+    display: flex;
+    margin-top: 5rem;
+    justify-content:space-evenly;
+    align-content:center;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 100px;
+    width: 0 auto;
+}
+.details h1{
+    font-family:sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    /* margin-left: 100px */
+
+}
+.details p{
+    width: 700px;
+    font-family: cursive;
+    font-size: 25px;
+}
+/* Work with buttons */
+.btn{
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+.btn button{
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: skyblue;
+    background: transparent;
+    border: 3px solid skyblue;
+    border-radius: 25px ;
+
+}
+.btn button:hover{
+    box-shadow: 2px 5px 50px white;
+}
+
+/* Img */
+.img-container{
+    width: 400px;
+    /* border-radius: 50%; */
+    height: 400px;
+    position: relative;
+}
+.img-container img{
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    border: 2px solid white;
+    transition: all 1s;
+}
+.img-container:hover img{
+    transform: scale(1.1);
+}
+.img-container::before{
+    content: "";
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50px;
+    
+    left: -50px;
+    
+    z-index: -1;
+    border-radius: 30%;
+    transition: all 1s;
+}
+.img-container:hover::before{
+    box-shadow: 10px 20px 50px white;
+    
+}
+
+/* Work */
+
+#work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin-bottom: 25px;
+    
+}
+#work h1{
+    font-size: 100px;
+    background: transparent;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: sans-serif;
+    font-weight: 900;
+    transition: all 1s;
+
+}
+#work h1:hover{
+    /* font-family: cursive; */
+    font-size: 120px;
+    color: skyblue;
+}
+.workforce{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.workfiles{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    transition: all 1s;
+}
+.workfiles img{
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+}
+.workfiles:hover{
+    transform: scale(1.1);
+}
+
+/* Contact */
+#contact{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-Menu{
+    height: 50vh;
+    background: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact h1{
+    text-align: center;
+    font-size: 100px;
+    background: transparent;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: sans-serif;
+    font-weight: 900;
+    transition: all 1s;
+
+}
+#contact h1:hover{
+    /* font-family: cursive; */
+    font-size: 120px;
+    color: skyblue;
+}
+.contact-Menu .icon-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+} 
+
+.lin{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    transition: all 1s;
+}
+.lin img{
+    width: 100px;
+    height: 100px;
+    /* border-radius: 50%; */
+}
+.lin:hover{
+    transform: scale(1.2);
+    box-shadow: 10px 20px 30px rgb(20, 5, 5);
+}
+.info{
+    margin-top: 5rem;
+}
+.info ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.info ul li{
+    list-style: none;
+    color:black;
+    transition: all 1s;
+}
+.info ul li:hover{
+    transform: scale(1.2);
+    margin:25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 10px 20px 30px black;
+}
